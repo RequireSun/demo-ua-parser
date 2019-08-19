@@ -8,7 +8,8 @@ var uap;
 
 var patchModelChina = {
     device: [
-        [/vivo ([\w\.]+)/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'vivo'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]]
+        [/vivo ([\w\.]+)/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'vivo'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
+        [/Android.+;\s(?:zh-CN;\s)?((?:m\d(?:\smetal)?)|(?:PRO\s\d)|(?:MX\d(?:\sPro)?))\sBuild/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'Meizu'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
     ],
 };
 
