@@ -1,6 +1,6 @@
 var $noticeDesktop = document.getElementById('notice-desktop');
-var $containerMain = document.getElementById('container-main');
 var $btnDesktopShow = document.getElementById('btn-desktop-show');
+var $containerMain = document.getElementById('container-main');
 
 var $sectionBase = document.getElementById('section-base');
 var $sectionIs = document.getElementById('section-is');
