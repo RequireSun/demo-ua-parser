@@ -1,5 +1,3 @@
-var $containerMain = document.getElementById('container-main');
-
 var $sectionUa = document.getElementById('section-ua');
 var $sectionDevice = document.getElementById('section-device');
 var $sectionOs = document.getElementById('section-os');
@@ -7,6 +5,12 @@ var $sectionBrowser = document.getElementById('section-browser');
 var $sectionEngine = document.getElementById('section-engine');
 
 var uap;
+
+var patchModelChina = {
+    device: [
+        [/vivo ([\w\.]+)/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'vivo'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]]
+    ],
+};
 
 var createLine = function (key, value) {
     var $line = document.createElement('div');
@@ -47,7 +51,7 @@ var createLine = function (key, value) {
 
 var init = function () {
     var ua = window.navigator.userAgent;
-    uap = new UAParser(ua);
+    uap = new UAParser(ua, patchModelChina);
     var result = uap.getResult();
 
     var i, l;
