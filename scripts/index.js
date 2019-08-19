@@ -16,6 +16,10 @@ var md;
             MobileDetect._impl.mobileDetectRules.props['WeChat'] = 'MicroMessenger\/[VER]';
         }
     }
+
+    if (!MobileDetect._impl.mobileDetectRules.phones['HUAWEI']) {
+        MobileDetect._impl.mobileDetectRules.phones['HUAWEI'] = new RegExp('Build/HUAWEI(\\w+-\\w+);', 'i');
+    }
 })();
 
 var createBase = function (key, value) {
