@@ -26,3 +26,11 @@ view: [https://requiresun.github.io/demo-ua-parser/ua-parser.html](https://requi
 缺点：判断方式有点傻（机型都是写死在正则里的，非常不方便扩展），并且好久没维护了
 
 view: [https://requiresun.github.io/demo-ua-parser/mobile-detect.html](https://requiresun.github.io/demo-ua-parser/mobile-detect.html)
+
+## 涉及工具
+
+手机 UA 查询：[http://www.fynas.com/](http://www.fynas.com/)
+
+手机 UA 库：[https://www.handsetdetection.com/](https://www.handsetdetection.com/)
+
+页面样式从这里抄的：[https://github.com/zeno/mobile-detect-demo](https://github.com/zeno/mobile-detect-demo)
