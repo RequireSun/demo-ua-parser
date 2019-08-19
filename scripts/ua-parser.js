@@ -8,9 +8,14 @@ var uap;
 
 var patchModelChina = {
     device: [
+        // vivo 根本没有
         [/Android.+;\s(?:zh-CN;\s)?vivo ([\w\.\s]+)\sBuild/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'vivo'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
+        // 魅族根本没有
         [/Android.+;\s(?:zh-CN;\s)?((?:m\d(?:\smetal)?)|(?:PRO\s\d)|(?:MX\d(?:\sPro)?))\sBuild/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'Meizu'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
+        // OPPO 新机没有更新上
         [/Android.+;\s(?:zh-CN;\s)?((?:PACM\d+)|(?:PAAM\d+)|(?:CPH\d+)|(?:PBET\d+))\sBuild/i], [[UAParser.DEVICE.VENDOR, 'OPPO'], [UAParser.DEVICE.MODEL, 'R15'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
+        // 小米新机 MAX 和老机 2S
+        [/Android.+;\s(?:zh-cn;\s)?((?:MI\sMAX\s\d)|(?:MIX\s\d\w?))\s+Build/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'Xiaomi'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
     ],
 };
 
