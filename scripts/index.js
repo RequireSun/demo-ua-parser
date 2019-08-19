@@ -3,6 +3,8 @@ var $containerMain = document.getElementById('container-main');
 var $btnDesktopShow = document.getElementById('btn-desktop-show');
 
 var $sectionBase = document.getElementById('section-base');
+var $sectionIs = document.getElementById('section-is');
+var $sectionVersion = document.getElementById('section-version');
 
 var md;
 
@@ -16,8 +18,71 @@ var md;
     }
 })();
 
+var createBase = function (key, value) {
+    var $line = document.createElement('div');
+    var $key = document.createElement('span');
+    var $value = document.createElement('span');
+
+    $key.innerText = key;
+    $value.innerText = value;
+
+    $line.appendChild($key);
+    $line.appendChild($value);
+
+    return $line;
+};
+
+var createIs = function (key, value) {
+    var $line = document.createElement('div');
+    var $key = document.createElement('span');
+    var $value = document.createElement('span');
+
+    $key.innerText = key;
+    $value.innerText = value;
+
+    $line.appendChild($key);
+    $line.appendChild($value);
+
+    return $line;
+};
+
+var createVersion = function (key, value) {
+    var $line = document.createElement('div');
+    var $key = document.createElement('span');
+    var $value = document.createElement('span');
+
+    $key.innerText = key;
+    $value.innerText = value;
+
+    $line.appendChild($key);
+    $line.appendChild($value);
+
+    return $line;
+};
+
 var showMain = function () {
-    $sectionBase.innerText = JSON.stringify(parseMd());
+    var parsed = parseMd();
+    var i, l;
+
+    var baseKeys = Object.keys(parsed.base);
+    var isKeys = Object.keys(parsed.is);
+    var versionKeys = Object.keys(parsed.version);
+
+    $sectionBase.innerHTML = '';
+    $sectionIs.innerHTML = '';
+    $sectionVersion.innerHTML = '';
+
+    for (i = 0, l = baseKeys.length; i < l; ++i) {
+        $sectionBase.appendChild(createBase(baseKeys[i], parsed.base[baseKeys[i]]));
+    }
+
+    for (i = 0, l = isKeys.length; i < l; ++i) {
+        $sectionIs.appendChild(createIs(isKeys[i], parsed.is[isKeys[i]]));
+    }
+
+    for (i = 0, l = versionKeys.length; i < l; ++i) {
+        $sectionVersion.appendChild(createVersion(versionKeys[i], parsed.version[versionKeys[i]]));
+    }
 
     $noticeDesktop.classList.remove('active');
     $containerMain.classList.add('active');
