@@ -6,9 +6,17 @@
     border-radius: 6px;
 }
 
+.container-footnote {
+    margin: 0 auto;
+    padding: 10px;
+}
+
 @media screen and (min-width: 400px) {
     .container {
         max-width: 400px;
+    }
+    .container-footnote {
+        max-width: 420px;
     }
 }
 
@@ -144,4 +152,23 @@
 
 .background-color-number {
     background-color: #f2777a;
+}
+
+.background-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    border: 2px solid #555;
+}
+
+.footnote-line p {
+    margin: 0 0 8px;
+    line-height: 10px;
+    text-indent: 6px;
+    color: #444;
+    font-size: 15px;
+}
+
+.footnote-line p, .footnote-line .background-color {
+    display: inline-block;
 }
