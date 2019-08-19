@@ -24,13 +24,43 @@ var md;
 
 var createBase = function (key, value) {
     var $line = document.createElement('div');
+    var $quoteLeft = document.createElement('span');
+    var $quoteRight = document.createElement('span');
+    var $equal = document.createElement('span');
     var $key = document.createElement('span');
     var $value = document.createElement('span');
 
+    $line.classList.add('line');
+    $quoteLeft.classList.add('quote');
+    $quoteRight.classList.add('quote');
+    $equal.classList.add('equal');
+    $value.classList.add('value');
+
     $key.innerText = key;
+    $quoteLeft.innerText = '(';
+    $quoteRight.innerText = ')';
+    $equal.innerText = '=';
     $value.innerText = value;
 
+    switch (typeof value) {
+        case 'string': {
+            $value.classList.add('string');
+            break;
+        }
+        case 'number': {
+            $value.classList.add('number');
+            break;
+        }
+        case 'boolean': {
+            $value.classList.add('boolean');
+            break;
+        }
+    }
+
     $line.appendChild($key);
+    $line.appendChild($quoteLeft);
+    $line.appendChild($quoteRight);
+    $line.appendChild($equal);
     $line.appendChild($value);
 
     return $line;
@@ -38,13 +68,47 @@ var createBase = function (key, value) {
 
 var createIs = function (key, value) {
     var $line = document.createElement('div');
+    var $quoteLeft = document.createElement('span');
+    var $quoteRight = document.createElement('span');
+    var $equal = document.createElement('span');
+    var $method = document.createElement('span');
     var $key = document.createElement('span');
     var $value = document.createElement('span');
 
-    $key.innerText = key;
+    $line.classList.add('line');
+    $quoteLeft.classList.add('quote');
+    $quoteRight.classList.add('quote');
+    $key.classList.add('key');
+    $equal.classList.add('equal');
+    $value.classList.add('value');
+
+    switch (typeof value) {
+        case 'string': {
+            $value.classList.add('string');
+            break;
+        }
+        case 'number': {
+            $value.classList.add('number');
+            break;
+        }
+        case 'boolean': {
+            $value.classList.add('boolean');
+            break;
+        }
+    }
+
+    $method.innerText = 'is';
+    $quoteLeft.innerText = '(';
+    $key.innerText = `'${key}'`;
+    $quoteRight.innerText = ')';
+    $equal.innerText = '=';
     $value.innerText = value;
 
+    $line.appendChild($method);
+    $line.appendChild($quoteLeft);
     $line.appendChild($key);
+    $line.appendChild($quoteRight);
+    $line.appendChild($equal);
     $line.appendChild($value);
 
     return $line;
@@ -52,13 +116,47 @@ var createIs = function (key, value) {
 
 var createVersion = function (key, value) {
     var $line = document.createElement('div');
-    var $key = document.createElement('span');
+    var $quoteLeft = document.createElement('span');
+    var $quoteRight = document.createElement('span');
+    var $equal = document.createElement('span');
+    var $method = document.createElement('span');
+    var $key = document.createElement('key');
     var $value = document.createElement('span');
 
-    $key.innerText = key;
+    $line.classList.add('line');
+    $quoteLeft.classList.add('quote');
+    $quoteRight.classList.add('quote');
+    $key.classList.add('key');
+    $equal.classList.add('equal');
+    $value.classList.add('value');
+
+    switch (typeof value) {
+        case 'string': {
+            $value.classList.add('string');
+            break;
+        }
+        case 'number': {
+            $value.classList.add('number');
+            break;
+        }
+        case 'boolean': {
+            $value.classList.add('boolean');
+            break;
+        }
+    }
+
+    $method.innerText = 'version';
+    $quoteLeft.innerText = '(';
+    $key.innerText = `'${key}'`;
+    $quoteRight.innerText = ')';
+    $equal.innerText = '=';
     $value.innerText = value;
 
+    $line.appendChild($method);
+    $line.appendChild($quoteLeft);
     $line.appendChild($key);
+    $line.appendChild($quoteRight);
+    $line.appendChild($equal);
     $line.appendChild($value);
 
     return $line;

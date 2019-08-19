@@ -15,7 +15,7 @@ var createLine = function (key, value) {
     var $value = document.createElement('span');
 
     $line.classList.add('line');
-    $key.classList.add('key');
+    $key.classList.add('method');
     $equal.classList.add('equal');
     $value.classList.add('value');
 

@@ -1,8 +1,1 @@
-
-.container-main {
-    display: none;
-}
-
-.container-main.active {
-    display: block;
-}
+@import "ua-parser.css";

@@ -26,7 +26,27 @@
 }
 
 .container-main {
+    display: none;
     margin: 20px 0;
+}
+
+.container-main.active {
+    display: block;
+}
+
+.container-main p {
+    color: #ccc;
+}
+
+.container-main button {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    padding: 6px 10px;
+    background-color: #ccc;
+    border-radius: 3px;
+    color: #333;
 }
 
 .container-footnote {}
@@ -69,10 +89,20 @@
 .line .key, .line .equal, .line .value {
 }
 
-.line .key {
+.line .method {
     min-width: 80px;
     color: #69c;
     text-align: right;
+}
+
+.line .key {
+    min-width: 80px;
+    color: #9c9;
+    text-align: right;
+}
+
+.line .quote {
+    color: #ccc;
 }
 
 .line .equal {
