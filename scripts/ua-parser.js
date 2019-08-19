@@ -10,6 +10,7 @@ var patchModelChina = {
     device: [
         [/Android.+;\s(?:zh-CN;\s)?vivo ([\w\.\s]+)\sBuild/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'vivo'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
         [/Android.+;\s(?:zh-CN;\s)?((?:m\d(?:\smetal)?)|(?:PRO\s\d)|(?:MX\d(?:\sPro)?))\sBuild/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'Meizu'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
+        [/Android.+;\s(?:zh-CN;\s)?((?:PACM\d+)|(?:PAAM\d+)|(?:CPH\d+)|(?:PBET\d+))\sBuild/i], [[UAParser.DEVICE.VENDOR, 'OPPO'], [UAParser.DEVICE.MODEL, 'R15'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
     ],
 };
 
