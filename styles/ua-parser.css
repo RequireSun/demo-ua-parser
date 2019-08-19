@@ -1,0 +1,102 @@
+.container {
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #2d2d2d;
+    border-radius: 6px;
+}
+
+@media screen and (min-width: 400px) {
+    .container {
+        max-width: 400px;
+    }
+}
+
+.container h1 {
+    color: #ccc;
+    font-size: 24px;
+}
+
+.container-version {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #777;
+    font-size: 14px;
+}
+
+.container-main {
+    margin: 20px 0;
+}
+
+.section-main + .section-main::before {
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 10px 0;
+    background-color: #999;
+}
+
+.section-main {
+    font-size: 12px;
+    font-family: Menlo, Monaco, "Courier New", Courier;
+}
+
+.section-textarea {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #282828;
+}
+
+.section-main h3 {
+    margin: 0 0 10px;
+    color: #ccc;
+}
+
+.section-main p {
+    margin: 0;
+    color: #69c;
+}
+
+.line {
+    color: #69c;
+    font-size: 16px;
+    font-family: Menlo, Monaco, "Courier New", Courier;
+}
+
+.line .key, .line .equal, .line .value {
+}
+
+.line .key {
+    min-width: 80px;
+    color: #69c;
+    text-align: right;
+}
+
+.line .equal {
+    padding: 0 10px;
+    color: #69c;
+}
+
+/*.line .equal::before {*/
+/*    content: " ";*/
+/*}*/
+
+/*.line .equal::after {*/
+/*    content: " ";*/
+/*}*/
+
+.line .value {
+    color: #9c9;
+}
+
+.line .value.string {
+    color: #f99157;
+}
+
+.line .value.boolean {
+    color: #c9c;
+}
+
+.line .value.number {
+    color: #f2777a;
+}
