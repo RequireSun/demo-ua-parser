@@ -16,6 +16,10 @@ var patchModelChina = {
         [/Android.+;\s(?:zh-CN;\s)?((?:PACM\d+)|(?:PAAM\d+)|(?:CPH\d+)|(?:PBET\d+))\sBuild/i], [[UAParser.DEVICE.VENDOR, 'OPPO'], [UAParser.DEVICE.MODEL, 'R15'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
         // 小米新机 MAX 和老机 2S
         [/Android.+;\s(?:zh-cn;\s)?((?:MI\sMAX\s\d)|(?:MIX\s\d\w?))\s+Build/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'Xiaomi'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
+        // 荣耀有一部分不认识
+        [/Build\/HONOR([\w\s-]+)[;\)]/i], [UAParser.DEVICE.MODEL, [UAParser.DEVICE.VENDOR, 'Honor'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
+        // 一加 1 就不管了, ua 写的鬼都不认识
+        [/Android.+;\s(?:zh-cn;\s)?oneplus2\sBuild/i], [[UAParser.DEVICE.VENDOR, 'OnePlus'], [UAParser.DEVICE.MODEL, '2'], [UAParser.DEVICE.TYPE, UAParser.DEVICE.MOBILE]],
     ],
 };
 
