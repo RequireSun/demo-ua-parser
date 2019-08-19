@@ -9,23 +9,23 @@ UA 解析库在线 Demo
 
 ## ua-parser
 
-项目地址：[https://github.com/faisalman/ua-parser-js](https://github.com/faisalman/ua-parser-js)
+view: [https://requiresun.github.io/demo-ua-parser/ua-parser.html](https://requiresun.github.io/demo-ua-parser/ua-parser.html)
 
 优点：功能很强大，解析准确使用方便
 
 缺点：扩展结构写起来太复杂了
 
-view: [https://requiresun.github.io/demo-ua-parser/ua-parser.html](https://requiresun.github.io/demo-ua-parser/ua-parser.html)
+项目地址：[https://github.com/faisalman/ua-parser-js](https://github.com/faisalman/ua-parser-js)
 
 ## mobile-detect
 
-项目地址：[https://github.com/hgoebl/mobile-detect.js](https://github.com/hgoebl/mobile-detect.js)
+view: [https://requiresun.github.io/demo-ua-parser/mobile-detect.html](https://requiresun.github.io/demo-ua-parser/mobile-detect.html)
 
 优点：扩展容易
 
 缺点：判断方式有点傻（机型都是写死在正则里的，非常不方便扩展），并且好久没维护了
 
-view: [https://requiresun.github.io/demo-ua-parser/mobile-detect.html](https://requiresun.github.io/demo-ua-parser/mobile-detect.html)
+项目地址：[https://github.com/hgoebl/mobile-detect.js](https://github.com/hgoebl/mobile-detect.js)
 
 ## 涉及工具
 
